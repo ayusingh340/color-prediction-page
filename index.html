@@ -4,46 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Godfather Prediction</title>
+    <title>Godfather Prediction - 99% Winning Tricks</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
             text-align: center;
-            background-color: #111;
-            color: white;
-            padding: 50px;
         }
-        .main-box {
-            border: 2px solid #444;
-            padding: 30px;
-            border-radius: 10px;
-            background: #222;
-            display: inline-block;
+        .container {
+            padding: 30px 20px;
         }
         h1 {
-            color: #f39c12;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
-        p {
-            font-size: 18px;
-            margin: 10px 0;
+        p.tagline {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #ccc;
         }
-        .tagline {
+        .join-btn {
+            background: #ff3838;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .timer {
+            margin-top: 40px;
+            font-size: 2rem;
             color: #00ff99;
-            font-weight: bold;
+        }
+        img.hero {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <div class="main-box">
+    <div class="container">
+        <img src="https://via.placeholder.com/800x400.png?text=Godfather+Prediction" class="hero" alt="Godfather Prediction Banner">
         <h1>Godfather Prediction</h1>
         <p class="tagline">99% Winning Tricks</p>
-        <p>Join Our Premium Colour Prediction Channel</p>
-        <p>Fast, Accurate & Trusted</p>
+        <a href="https://t.me/+Ml1TRFyU68BjN2Y1" class="join-btn" target="_blank">Join Telegram Now</a>
+
+        <div class="timer" id="countdown">00:59</div>
+
+        <div class="footer">© 2025 Godfather Prediction. All rights reserved.</div>
     </div>
-    <div style="text-align:center; margin-top: 30px;">
-  <a href="https://t.me/+Ml1TRFyU68BjN2Y1" target="_blank" style="padding: 15px 30px; background-color: #0088cc; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold;">
-    🔗 Join Our Telegram
-  </a>
-</div>
+
+    <script>
+        let timeLeft = 59;
+        const countdownEl = document.getElementById('countdown');
+
+        function updateTimer() {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            if (seconds < 10) seconds = '0' + seconds;
+            countdownEl.textContent = `00:${seconds}`;
+            timeLeft--;
+            if (timeLeft < 0) {
+                timeLeft = 59; // reset to 59 again for looping timer
+            }
+        }
+        setInterval(updateTimer, 1000);
+    </script>
 </body>
 </html>
